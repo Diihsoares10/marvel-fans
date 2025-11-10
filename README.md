@@ -1,16 +1,33 @@
-# React + Vite
+# Marvel Fans — Site simples em Flask
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Um site simples e completo feito em **Flask**, HTML, CSS e JavaScript (AJAX), onde fãs se cadastram para ser o **fã número 1 da Marvel**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> **Coloque suas imagens aqui**: substitua `./.github/IMG_PLACEHOLDER.png` por capturas de tela do seu carrossel e do formulário.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## O que eu fiz
 
-## Expanding the ESLint configuration
+Este projeto implementa uma **única página** que contém:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Um **carrossel automático** de imagens dos filmes da Marvel (troca a cada **5 segundos**).
+- Uma chamada central: **“Faça um cadastro para ser o fã número 1 da Marvel!”**
+- Um **formulário de cadastro** com os campos:
+  - Nome (texto)
+  - Idade (número)
+  - Super-herói favorito (select)
+  - Filme favorito (select)
+  - Descrição (textarea)
+  - Botão **Enviar Cadastro**
+- Envio dos dados via **AJAX (fetch)** para a rota Flask `/cadastrar`.
+- Os cadastros são **armazenados em memória** (lista Python — sem banco de dados).
+- Após enviar, o site mostra uma mensagem de sucesso e **atualiza dinamicamente** um ranking com todos os fãs cadastrados.
+- O ranking é **embaralhado** na primeira exibição (sorteio do primeiro lugar) — cadastros novos entram pela ordem de chegada.
+- Layout: fundo preto, textos em branco e vermelho, fonte moderna (Poppins/Roboto), centralizado, CSS simples (sem frameworks).
+
+---
+
+## Estrutura do projeto
+
